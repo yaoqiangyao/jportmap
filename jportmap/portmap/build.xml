@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project default="create_run_jar" name="Create Runnable Jar for Project portmap">
+    <!--this file was created by Eclipse Runnable JAR Export Wizard-->
+    <!--ANT 1.7 is required                                        -->
+    <target name="create_run_jar">
+        <jar destfile="E:/workspace/portmap/portmap.jar" filesetmanifest="mergewithoutmain">
+            <manifest>
+                <attribute name="Main-Class" value="portmap.PortMap"/>
+                <attribute name="Class-Path" value="."/>
+            </manifest>
+            <fileset dir="E:/workspace/portmap/WebContent/WEB-INF/classes"/>
+            <zipfileset excludes="META-INF/*.SF" src="E:/workspace/portmap/WebContent/WEB-INF/lib/commons-logging.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="E:/workspace/portmap/WebContent/WEB-INF/lib/jackson-core-asl-1.6.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="E:/workspace/portmap/WebContent/WEB-INF/lib/jackson-mapper-asl-1.6.2.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="E:/workspace/portmap/WebContent/WEB-INF/lib/log4j-1.2.15.jar"/>
+            <zipfileset excludes="META-INF/*.SF" src="E:/workspace/portmap/WebContent/WEB-INF/lib/xSocket-2.8.14.jar"/>
+        </jar>
+    </target>
+</project>
